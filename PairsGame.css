@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Edu+SA+Beginner:wght@600&family=Noto+Sans+Chorasmian&family=Oswald&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Edu+SA+Beginner:wght@600&family=Noto+Sans+Chorasmian&family=Rubik+Iso&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(132, 217, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title {
+    font-family: 'Rubik Iso', cursive;
+    color: white;
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+}
+.character {
+    font-family: 'Cute Font', cursive;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0.5rem;
+}
+#intro {
+    margin: 2rem 0.5rem 0.5rem 0.5rem
+}
+#time {
+    font-size: 3rem;
+}
+.game {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    font-family: 'Cute Font', cursive;
+    font-size: 2rem;
+    padding: 5px 10px;
+    color: rgb(132, 217, 238);
+    background-color: white;
+    /* border: none; */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 2rem;
+}
+.btn:hover {
+    background-color: rgb(133, 143, 255);
+}
+
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s;
+    transform: rotateY(180deg); 
+}
+.item.boxOpen, .item.boxMatch {
+    transform: rotateY(0deg);
+}
+.item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(157, 135, 255);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.boxOpen:after {
+    transform: rotateY(180deg);
+}
+.boxMatch:after {
+    transform: rotateY(180deg);
+}
