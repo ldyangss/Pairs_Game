@@ -1,5 +1,5 @@
 let timer;
-let seconds = 15;
+let seconds = 20;
 let started = false;
 
 function updateTimer() {
@@ -53,7 +53,7 @@ for (var i = 0; i < img.length; i++){
                     openedBoxes[0].classList.remove('boxOpen');
                     openedBoxes[1].classList.remove('boxOpen');
 
-                    seconds += 5; 
+                    seconds += 3; 
 
                     if (document.querySelectorAll('.boxMatch').length === img.length) {
                         clearInterval(timer);
