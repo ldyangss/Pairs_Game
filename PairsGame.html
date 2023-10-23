@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pairs Game</title>
     <link rel="stylesheet" href="PairsGame.css">
-    
+    <script src="PairsGame.js"></script>
+    <script src="https://kit.fontawesome.com/3823a31ea0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <h1 class="title">Pairs Game</h1>
         <p class="character" id="intro">Click any card to start</p>
         <p class="character" id="time">
-            <span id="minutes">00</span>:<span id="seconds">20</span>
+            <span id="minutes">00</span>:<span id="seconds">25</span>
         </p>
         <div class="game"></div>
         <button class="btn" onclick="window.location.reload()">Reset Game</button>
     </div>
-    
-    <script src="PairsGame.js"></script>
+    <div class="end_container">
+        <div class="end">
+            <img id="win" src="image/win.png">
+            <img id="lose" src="image/lose.gif">
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+    </div>
+
 </body>
 </html>
